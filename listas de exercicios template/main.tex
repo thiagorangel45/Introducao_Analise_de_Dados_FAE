@@ -1,0 +1,77 @@
+\documentclass[a4 paper]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+% Set target color model to RGB
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,amssymb}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{rotating}
+%\usetikzlibrary{through,backgrounds}
+\hypersetup{%
+pdfauthor={Ashudeep Singh},%
+pdftitle={Homework},%
+pdfkeywords={Tikz,latex,bootstrap,uncertaintes},%
+pdfcreator={PDFLaTeX},%
+pdfproducer={PDFLaTeX},%
+}
+%\usetikzlibrary{shadows}
+% \usepackage[francais]{babel}
+\usepackage{booktabs}
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0,0.5,0}
+% Configurando layout para mostrar codigos C++
+\usepackage{listings}
+\lstset{
+  language=C++,
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{blue}, 
+  stringstyle=\color{verde}, 
+  commentstyle=\color{red}, 
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true, 
+  backgroundcolor=\color{green!10},
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+}
+
+\input{macros.tex}
+
+
+\begin{document}
+\homework{TITULO DO EXERCICIO}{DATA}{NOME DOS PROFESSORES}{}{NOME DO ALUNO}
+
+TEXTO
+
+\problem{EXERCICIO 1 }
+
+TEXTO
+
+\begin{lstlisting}
+CODIGO USADO PARA RESOLVER O PROBLEMA
+\end{lstlisting}
+
+TEXTO
+
+\problem{EXERCICIO 2 }
+
+TEXTO
+
+\begin{lstlisting}
+CODIGO USADO PARA RESOLVER O PROBLEMA
+\end{lstlisting}
+
+TEXTO
+
+\end{document} 
