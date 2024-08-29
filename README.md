@@ -44,7 +44,8 @@ Os tópicos da ementa serão abordados a partir dos sistemas operacionais, lingu
 
 ## Cronograma de Aulas
 
-Abaixo está o cronograma das aulas, conforme a figura a seguir:
+Abaixo está o cronograma das aulas nesse semestre:
 
-![Cronograma de Aulas](Cronograma_introducaoFAE.png)
-
+<p align="center">
+  <img src="Cronograma_introducaoFAE.png" alt="Cronograma de Aulas">
+</p>
