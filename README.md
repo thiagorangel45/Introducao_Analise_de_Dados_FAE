@@ -10,6 +10,14 @@ Este repositório contém materiais e códigos utilizados na disciplina **Análi
 - **Dilson de Jesus Damião**
 - **Maurício Thiel**
 
+## Organização do Repositório
+
+Cada pasta contém:
+- Slides e materiais de apoio
+- Exemplos de código (Python, ROOT, etc.)
+- Exercícios práticos
+- Listas de exercícios e notebooks com os códigos
+
 ## Ementa do Programa
 
 ### Cinemática das Colisões em Altas Energias
@@ -33,11 +41,3 @@ Este repositório contém materiais e códigos utilizados na disciplina **Análi
 - Técnicas de variáveis múltiplas
 
 Os tópicos da ementa serão abordados a partir dos sistemas operacionais, linguagens de programação e programas específicos utilizados na área de Física de Altas Energias.
-
-## Organização do Repositório
-
-Cada pasta contém:
-- Slides e materiais de apoio
-- Exemplos de código (Python, ROOT, etc.)
-- Exercícios práticos
-- Listas de exercícios e notebooks com os códigos
