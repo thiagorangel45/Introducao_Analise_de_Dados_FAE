@@ -41,3 +41,10 @@ Cada pasta contém:
 - Técnicas de variáveis múltiplas
 
 Os tópicos da ementa serão abordados a partir dos sistemas operacionais, linguagens de programação e programas específicos utilizados na área de Física de Altas Energias.
+
+## Cronograma de Aulas
+
+Abaixo está o cronograma das aulas, conforme a figura a seguir:
+
+![Cronograma de Aulas](path/para/a/imagem.png)
+
