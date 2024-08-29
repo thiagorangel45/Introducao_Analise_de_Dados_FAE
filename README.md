@@ -6,7 +6,7 @@ Este repositório contém materiais e códigos utilizados na disciplina **Análi
 
 ## Professores
 
-- **Eliza Melo**
+- **Eliza Melo da Costa**
 - **Dilson de Jesus Damião**
 - **Maurício Thiel**
 
