@@ -34,25 +34,10 @@ Este repositório contém materiais e códigos utilizados na disciplina **Análi
 
 Os tópicos da ementa serão abordados a partir dos sistemas operacionais, linguagens de programação e programas específicos utilizados na área de Física de Altas Energias.
 
-## Como Utilizar
+## Organização do Repositório
 
-Cada módulo contém:
-- Slides e materiais de apoio na pasta ....
+Cada pasta contém:
+- Slides e materiais de apoio
 - Exemplos de código (Python, ROOT, etc.)
 - Exercícios práticos
-- Listas de exercícios 
-
-### Requisitos
-
-- Python 3.x
-- ROOT Framework
-- Jupyter Notebook
-
-### Instalação
-
-Clone o repositório e instale as dependências:
-
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-pip install -r requirements.txt
+- Listas de exercícios e notebooks com os códigos
