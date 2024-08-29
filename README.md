@@ -46,5 +46,5 @@ Os tópicos da ementa serão abordados a partir dos sistemas operacionais, lingu
 
 Abaixo está o cronograma das aulas, conforme a figura a seguir:
 
-![Cronograma de Aulas](path/para/a/imagem.png)
+![Cronograma de Aulas](Cronograma_introducaoFAE.png)
 
