@@ -13,7 +13,7 @@
 void exercicio_3() {
 
 
-    TCanvas *c1 = new TCanvas("c1", "Ajuste J/ψ", 800, 600);
+    TCanvas *c1 = new TCanvas("c1", "Ajuste JPsi", 800, 600);
     TFile *file = new TFile("/Users/thiagorangel/UERJ/Introducao_Analise_de_Dados_FAE/data/DataSet_lowstat.root");
     TTree *tree = (TTree*)file->Get("data");
 
