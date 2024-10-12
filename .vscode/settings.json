@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "simple_histogram.C": "cpp",
+        "simple_histogram2D.C": "cpp",
+        "simple_graph.C": "cpp",
+        "simple_function.C": "cpp",
+        "simple_random.C": "cpp",
+        "simple_fit.C": "cpp"
+    }
+}
