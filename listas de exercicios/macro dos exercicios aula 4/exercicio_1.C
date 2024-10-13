@@ -24,7 +24,18 @@ void exercicio_1() {
 
     fitResult->Print();  
 
+    TLegend *leg = new TLegend(0.6, 0.7, 0.88, 0.9);  
+    leg->AddEntry(xframe->findObject("data"), "Dados", "PL");  
+    leg->AddEntry(xframe->findObject("crystalball"), "Ajuste Crystal Ball", "l");  
+    leg->AddEntry((TObject*)0, Form("media = %.3f", mean.getVal()), "");
+    leg->AddEntry((TObject*)0, Form("#sigma = %.3f", sigma.getVal()), "");
+    leg->AddEntry((TObject*)0, Form("#alpha = %.3f", alpha.getVal()), "");
+    leg->AddEntry((TObject*)0, Form("n = %.3f", n.getVal()), "");
+
+    xframe->SetTitle("");
+
     TCanvas* c1 = new TCanvas("c1", "Ajuste da pdf Crystal Ball", 800, 600);
     xframe->Draw();  
+    leg->Draw("SAME");
     c1->SaveAs("crystalball_fit.png");
 }

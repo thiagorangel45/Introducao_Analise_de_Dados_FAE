@@ -14,6 +14,8 @@
         "example_workspace.C": "cpp",
         "example_addpdf_1.C": "cpp",
         "example_addpdf_2.C": "cpp",
-        "exercicio_3.C": "cpp"
+        "exercicio_3.C": "cpp",
+        "exercicio_1.C": "cpp",
+        "exercicio_2.C": "cpp"
     }
 }
