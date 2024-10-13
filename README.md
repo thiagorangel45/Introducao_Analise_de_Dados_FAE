@@ -15,8 +15,7 @@ Este repositório contém materiais e códigos utilizados na disciplina **Análi
 Cada pasta contém:
 - Slides e materiais de apoio
 - Exemplos de código (Python, ROOT, etc.)
-- Exercícios práticos
-- Listas de exercícios e notebooks com os códigos
+- Listas de exercícios com os códigos
 
 ## Ementa do Programa
 
