@@ -1,28 +1,28 @@
 void exercicio_4() {
 
-    TCanvas *c1 = new TCanvas("c1", "Canvas", 800, 600);
-    TH1F *hist = new TH1F("hist", "", 50, 0, 10);
-    TRandom3 *rand = new TRandom3();
+    TCanvas *c1 = new TCanvas("c1", "Histograma de Momento", 800, 600);
+    TFile *file = new TFile("/Users/thiagorangel/UERJ/Introducao_Analise_de_Dados_FAE/data/tree.root");
+    TTree *tree = (TTree*)file->Get("tree1");
+    
+    TH1F *hist = new TH1F("hist", "Distribuição do Momento Total", 100, 0, 200);
 
-    for (int i = 0; i < 10000; ++i) {
-        double value = rand->Gaus(5, 2); 
-        hist->Fill(value);
+    float px, py, pz, ebeam;
+    tree->SetBranchAddress("ebeam", &ebeam);
+    tree->SetBranchAddress("px", &px); 
+    tree->SetBranchAddress("py", &py);
+    tree->SetBranchAddress("pz", &pz);
+
+    float sumEbeam = 0;
+    Int_t nEntries = tree->GetEntries();
+
+    for (Int_t i = 0; i < nEntries; i++) {
+        tree->GetEntry(i);
+        sumEbeam += ebeam;
     }
+    
+    float meanEbeam = sumEbeam / nEntries;  
 
-    hist->Draw();
-    hist->SetStats(0);
-    TLegend *legend = new TLegend(0.7, 0.7, 0.9, 0.9); 
-    legend->SetHeader("Estatistica", "C"); 
-
-    legend->AddEntry((TObject*)0, Form("Entries: %d", (int)hist->GetEntries()), "");
-    legend->AddEntry((TObject*)0, Form("Mean: %.2f", hist->GetMean()), "");
-    legend->AddEntry((TObject*)0, Form("RMS: %.2f", hist->GetRMS()), "");
-    legend->AddEntry((TObject*)0, Form("Integral: %.2f", hist->Integral()), "");
-    legend->AddEntry((TObject*)0, Form("Underflows: %d", (int)hist->GetBinContent(0)), "");
-    legend->AddEntry((TObject*)0, Form("Overflows: %d", (int)hist->GetBinContent(hist->GetNbinsX() + 1)), "");
-    legend->AddEntry((TObject*)0, Form("Skewness: %.2f", hist->GetSkewness()), "");
-    legend->AddEntry((TObject*)0, Form("Kurtosis: %.2f", hist->GetKurtosis()), "");
-    legend->Draw();
-
-    c1->SaveAs("histogram_estatistica.png");
+    TCut *cutEbeam = new TCut(Form("ebeam < %f || ebeam > %f", meanEbeam - 0.2, meanEbeam + 0.2));
+    tree->Draw("sqrt(px*px + py*py + pz*pz)", *cutEbeam);
+    c1->SaveAs("histograma_momento.png");
 }

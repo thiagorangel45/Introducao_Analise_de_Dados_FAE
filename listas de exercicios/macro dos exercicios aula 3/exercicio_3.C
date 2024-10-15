@@ -1,30 +1,28 @@
 void exercicio_3() {
 
-    TCanvas *c1 = new TCanvas(); 
-    TGraphErrors *gr = new TGraphErrors(); 
+    TCanvas *c1 = new TCanvas("c1", "Canvas", 800, 600);
+    TH1F *hist = new TH1F("hist", "", 50, 0, 10);
+    TRandom3 *rand = new TRandom3();
 
-    std::ifstream file("/Users/thiagorangel/UERJ/Introducao_Analise_de_Dados_FAE/data/graphdata_error.txt"); // Abre o arquivo
-
-    double x, y, ex, ey;
-    while (1) {
-        file >> x >> y >> ex >> ey; 
-
-        if (file.eof()) {break;}
-
-        gr->SetPoint(gr->GetN(), x, y);
-        gr->SetPointError(gr->GetN() - 1, ex, ey);
+    for (int i = 0; i < 10000; ++i) {
+        double value = rand->Gaus(5, 2); 
+        hist->Fill(value);
     }
 
-    gr->SetMarkerSize(1);
-    gr->SetMarkerStyle(21);
-    gr->Draw("AP");
-    c1->SaveAs("graph_error_1.png");
+    hist->Draw();
+    hist->SetStats(0);
+    TLegend *legend = new TLegend(0.7, 0.7, 0.9, 0.9); 
+    legend->SetHeader("Estatistica", "C"); 
 
-    gr->SetMarkerSize(1);
-    gr->SetMarkerStyle(21);
-    gr->Draw("AL"); 
-    c1->Draw();
-    c1->SaveAs("graph_error_2.png");
+    legend->AddEntry((TObject*)0, Form("Entries: %d", (int)hist->GetEntries()), "");
+    legend->AddEntry((TObject*)0, Form("Mean: %.2f", hist->GetMean()), "");
+    legend->AddEntry((TObject*)0, Form("RMS: %.2f", hist->GetRMS()), "");
+    legend->AddEntry((TObject*)0, Form("Integral: %.2f", hist->Integral()), "");
+    legend->AddEntry((TObject*)0, Form("Underflows: %d", (int)hist->GetBinContent(0)), "");
+    legend->AddEntry((TObject*)0, Form("Overflows: %d", (int)hist->GetBinContent(hist->GetNbinsX() + 1)), "");
+    legend->AddEntry((TObject*)0, Form("Skewness: %.2f", hist->GetSkewness()), "");
+    legend->AddEntry((TObject*)0, Form("Kurtosis: %.2f", hist->GetKurtosis()), "");
+    legend->Draw();
 
-    file.close();
+    c1->SaveAs("histogram_estatistica.png");
 }
